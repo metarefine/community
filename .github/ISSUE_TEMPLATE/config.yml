@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+- name: 账号、账务、日志或安全问题：请使用私密支持
+  url: https://github.com/metarefine/community/blob/main/SUPPORT.md
+  about: 请先阅读支持指引，不要在公开 Issue 中提交敏感内容。

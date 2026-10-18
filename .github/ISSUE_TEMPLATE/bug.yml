@@ -1,0 +1,55 @@
+name: 通用问题 / Bug
+description: 报告不包含敏感资料的可复现问题。
+title: '[Bug] '
+body:
+- type: markdown
+  attributes:
+    value: 这是公开反馈。请勿提交密钥、账号/订单信息、客户代码/聊天、完整日志、个人路径或 Archive/数据库。敏感问题请改用应用内私密反馈。
+- type: input
+  id: version
+  attributes:
+    label: MetaRefine 版本与发行渠道
+    placeholder: 如：产品显示的版本；Store / EXE / 未知
+  validations:
+    required: true
+- type: input
+  id: environment
+  attributes:
+    label: 系统与 AI 工具版本
+    placeholder: 操作系统；WorkBuddy / CodeBuddy / Trae；版本未知请写未知
+  validations:
+    required: true
+- type: textarea
+  id: reproduction
+  attributes:
+    label: 最少复现步骤
+    description: 仅公开合成例子，不附客户日志或账号信息。
+  validations:
+    required: true
+- type: textarea
+  id: expected_actual
+  attributes:
+    label: 期望行为与实际行为
+  validations:
+    required: true
+- type: input
+  id: safe_error
+  attributes:
+    label: 非敏感错误码（可选）
+    description: 不要粘贴完整请求或完整日志。
+- type: dropdown
+  id: without_optimization
+  attributes:
+    label: 关闭 MR 额外优化后是否仍出现
+    options:
+    - 尚未测试
+    - 仍出现
+    - 不再出现
+    - 无法安全测试
+- type: checkboxes
+  id: privacy
+  attributes:
+    label: 公开内容确认
+    options:
+    - label: 我理解提交后内容公开，已检查并移除敏感资料。
+      required: true
