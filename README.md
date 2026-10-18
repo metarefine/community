@@ -10,4 +10,10 @@
 
 当前功能与支持级别以实际产品版本说明为准；提出适配请求不代表已经支持对应工具。修复代码合并、测试版可用、正式版已发布是不同状态。
 
-贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。本仓库将来如收录配方或公开测试数据，也不意味着它们会自动在客户电脑上运行。
+贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 声明式配方提案
+
+配方通过 fork 和 Pull Request 作为声明式 JSON 提交。候选文件不会自动进入客户执行路径；维护者核对来源、许可和与现有方法的关系，并完成最小验证后，才会显式收录到应用。应用收录、打包和正式发布分别记录。
+
+当前 RTK 文件是 Donald Tong 的维护者示例，由 AI 辅助；它不是第三方社区贡献，也不是独立人审。维护者审核和必要验证已完成，固定快照已收录到应用源码，状态为 accepted-for-next-application-build/source-included；尚未打包或发布。配方中的 fallback_scheme=standard 表示用户手动切回 Standard；配置未确认时不会自动切换或重试。详见[审核记录](recipes/context/rtk/review.md)。公开配方不会因为合并到本仓库就自动在客户电脑上运行。

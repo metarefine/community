@@ -1,0 +1,22 @@
+{
+  "schema_version": "metarefine.community-recipe-candidate.v1",
+  "id": "metarefine.context.rtk",
+  "version": "1.0.0",
+  "contribution": {
+    "kind": "maintainer-seed",
+    "maintainer": "Donald Tong",
+    "ai_assisted": true
+  },
+  "license": "MIT",
+  "applicability": {
+    "environment": "bundled-local-engine-context-pipeline",
+    "compression_version": "3.8.51"
+  },
+  "steps": [
+    {
+      "engine": "rtk",
+      "intensity": "standard"
+    }
+  ],
+  "fallback_scheme": "standard"
+}
