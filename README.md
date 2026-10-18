@@ -17,3 +17,5 @@
 配方通过 fork 和 Pull Request 作为声明式 JSON 提交。候选文件不会自动进入客户执行路径；维护者核对来源、许可和与现有方法的关系，并完成最小验证后，才会显式收录到应用。应用收录、打包和正式发布分别记录。
 
 当前 RTK 文件是 Donald Tong 的维护者示例，由 AI 辅助；它不是第三方社区贡献，也不是独立人审。维护者审核和必要验证已完成，固定快照已收录到应用源码，状态为 accepted-for-next-application-build/source-included；尚未打包或发布。配方中的 fallback_scheme=standard 表示用户手动切回 Standard；配置未确认时不会自动切换或重试。详见[审核记录](recipes/context/rtk/review.md)。公开配方不会因为合并到本仓库就自动在客户电脑上运行。
+
+原创方法源码和公开合成测试也可通过同一 fork+PR 入口提交；外部提交不会自动执行。当前 [Vitest 成功输出摘要候选](methods/vitest-success-v1/README.md) 仍待维护者验证，尚未纳入应用。
