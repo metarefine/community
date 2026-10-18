@@ -2,8 +2,8 @@
 
 请勿在普通 Issue 或 Discussion 中公开漏洞利用细节、密钥、客户数据或完整诊断包。
 
-优先使用已确认的私密安全支持渠道。若本仓库启用了 GitHub 的 Private Vulnerability Reporting，可通过 Security 页的私密报告入口提交；普通公开 Issue 不是私密报告。
+本仓库已启用 GitHub Private Vulnerability Reporting。安全漏洞请通过 [私密漏洞报告入口](https://github.com/metarefine/community/security/advisories/new) 提交（需要登录 GitHub），该入口独立于应用是否能正常启动。普通公开 Issue 不是私密报告。
 
-在该功能尚未启用时，请通过应用内私密反馈或客户已知的支持渠道联系维护者，先说明“安全问题，需要私密跟进”，再按要求提供必要细节。
+也可通过应用内私密反馈或客户已知的支持渠道联系维护者，先说明“安全问题，需要私密跟进”，再按要求提供必要细节。
 
-维护者部署此模板前必须核验至少一个不依赖应用正常启动的私密报告渠道。没有验证渠道时，不得宣传已提供完整安全报告入口。
+此入口仅用于安全漏洞。账号、订单和账务问题请按 [支持渠道](SUPPORT.md) 处理，不要提交到公开 Issue。

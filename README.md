@@ -2,7 +2,7 @@
 
 这里是 MetaRefine 的公开反馈与交流入口，不包含 MetaRefine 应用源码。
 
-通用 Bug、功能建议与兼容请求请使用 Issues 的对应表单；使用问答与经验交流可使用 Discussions（以实际启用情况为准）。维护者会根据复现与验收推进问题，公开状态不等于交付日期承诺。
+通用 Bug、功能建议与兼容请求请使用 [Issues 对应表单](https://github.com/metarefine/community/issues/new/choose)；使用问答与经验交流请前往 [Discussions](https://github.com/metarefine/community/discussions)。维护者会根据复现与验收推进问题，公开状态不等于交付日期承诺。
 
 **提交公开 Issue/Discussion 后，内容会对互联网公开。** 请勿填写密码、API/本机令牌、账户或订单信息、客户聊天、客户代码、绝对路径、完整日志、Archive/数据库或未脱敏截图。表单不能阻止用户误贴敏感信息，请提交前检查。
 
