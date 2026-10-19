@@ -18,4 +18,4 @@
 
 当前 RTK 文件是 Donald Tong 的维护者示例，由 AI 辅助；它不是第三方社区贡献，也不是独立人审。维护者审核和必要验证已完成，固定快照已收录到应用源码，状态为 accepted-for-next-application-build/source-included；尚未打包或发布。配方中的 fallback_scheme=standard 表示用户手动切回 Standard；配置未确认时不会自动切换或重试。详见[审核记录](recipes/context/rtk/review.md)。公开配方不会因为合并到本仓库就自动在客户电脑上运行。
 
-原创方法源码和公开合成测试也可通过同一 fork+PR 入口提交；外部提交不会自动执行。当前 [Vitest 成功输出摘要候选](methods/vitest-success-v1/README.md) 仍待维护者验证，尚未纳入应用。
+原创方法源码和公开合成测试也可通过同一 fork+PR 入口提交；外部提交不会自动执行。当前 [Vitest 成功输出摘要候选](methods/vitest-success-v1/README.md) 已完成来源、许可和必要验证核对，由 AI 辅助的维护者流程代表 Donald Tong 自审，不是独立人类审核。状态为 accepted-for-next-application-build/source-included；打包和发布尚未完成。

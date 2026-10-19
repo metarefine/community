@@ -1,6 +1,6 @@
 # Vitest 全通过摘要候选 v1
 
-状态：待维护者验证。当前候选是 Donald Tong 的原创方法说明，由 AI 辅助整理；不代表已独立审核、纳入应用或发布。
+状态：accepted-for-next-application-build/source-included。Donald Tong 的原创候选已由 AI 辅助的维护者流程代表其完成自审；这不是独立人类或外部贡献者审核。来源和许可核对、必要测试已完成；应用源码已纳入下一构建，打包和发布尚未完成。
 
 ## 方法范围
 
@@ -29,4 +29,9 @@ fn summarize_vitest_success(
 
 方法由 Donald Tong 原创，AI 辅助整理；MIT 范围见本目录的 `LICENSE`，仅覆盖本方法源码和本候选的原创合成测试。
 
-当前只准备合成输出格式边界。候选仍待维护者验证；这不证明实际 Vitest 环境覆盖、任务质量或任何账单节省，也不表示代码已集成到应用。
+## 审核与验证记录
+
+- 来源与许可：核对为 Donald Tong 的原创方法、AI 辅助；本目录 MIT 仅覆盖该方法源码和原创合成测试。
+- 方法验证：三项新增 Rust 定向测试最终均通过。首轮有一项仅因合成 fixture 锚点不匹配失败；修正测试锚点后只重跑该失败项并通过，生产 parser 未因此修改。
+- 原文保护回归：现有 Runtime `reducer_archive_failure_returns_original_and_success_keeps_recovery_stable` 定向测试通过，验证归档失败保留原文、成功归档仍可恢复。
+- 本轮付费调用为 0。验证覆盖固定的合成格式和原文保护边界，不证明真实 Vitest 环境覆盖、任务质量或账单节省；候选已纳入下一构建源码，但尚未打包或发布。
