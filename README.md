@@ -12,6 +12,14 @@
 
 贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
+## Token 实测报告
+
+五类 WorkBuddy 完整任务实测，10 份答案检查均正确；按完整任务统计的 Token 减少为 12.00%–90.65%。
+
+- [下载 HTML 报告（下载后用浏览器打开）](reports/token/2026-10-19/report.html)
+- [下载复现包 ZIP](reports/token/2026-10-19/MetaRefine-Token-Reproduce-0.1.92.zip)
+
+
 ## 声明式配方提案
 
 配方通过 fork 和 Pull Request 作为声明式 JSON 提交。候选文件不会自动进入客户执行路径；维护者核对来源、许可和与现有方法的关系，并完成最小验证后，才会显式收录到应用。应用收录、打包和正式发布分别记录。
