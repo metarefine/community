@@ -88,7 +88,10 @@ pub fn summarize_vitest_success(command: &str, text: &str, exit_status: i32) -> 
     }
     index += 1;
 
-    let duration = lines.get(index)?.strip_prefix("Duration ")?;
+    let duration = lines
+        .get(index)?
+        .strip_prefix("Duration ")?
+        .strip_prefix(' ')?;
     let (elapsed, phases) = duration.split_once(" (")?;
     if !is_ms(elapsed) {
         return None;
@@ -161,7 +164,7 @@ pub(crate) const COMPLETE_VITEST_SUCCESS_REPORT: &str = " RUN  v4.0.0 C:/project
  Test Files  2 passed (2)\n\
       Tests  5 passed (5)\n\
    Start at  13:29:16\n\
-   Duration 24ms (transform 8ms, setup 0ms, collect 6ms, tests 4ms, environment 0ms, prepare 4ms)\n";
+   Duration  24ms (transform 8ms, setup 0ms, collect 6ms, tests 4ms, environment 0ms, prepare 4ms)\n";
 
 #[cfg(test)]
 mod tests {

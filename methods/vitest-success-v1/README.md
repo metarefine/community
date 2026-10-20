@@ -33,6 +33,7 @@ fn summarize_vitest_success(
 
 - 来源与许可：核对为 Donald Tong 的原创方法、AI 辅助；本目录 MIT 仅覆盖该方法源码和原创合成测试。
 - 方法验证：三项新增 Rust 定向测试最终均通过。首轮有一项仅因合成 fixture 锚点不匹配失败；修正测试锚点后只重跑该失败项并通过，生产 parser 未因此修改。
+- 后续格式修正：默认输出的 `Duration` 后有两个对齐空格，解析器和正样本已同步这一格式；版本、全通过、计数与拒绝条件保持原范围。三项既有方法及恢复定向测试通过。
 - 原文保护回归：现有 Runtime `reducer_archive_failure_returns_original_and_success_keeps_recovery_stable` 定向测试通过，验证归档失败保留原文、成功归档仍可恢复。
 - 本轮付费调用为 0。验证覆盖固定的合成格式和原文保护边界，不证明真实 Vitest 环境覆盖、任务质量或账单节省；候选已纳入下一构建源码，但尚未打包或发布。
 
