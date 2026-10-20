@@ -35,3 +35,8 @@ fn summarize_vitest_success(
 - 方法验证：三项新增 Rust 定向测试最终均通过。首轮有一项仅因合成 fixture 锚点不匹配失败；修正测试锚点后只重跑该失败项并通过，生产 parser 未因此修改。
 - 原文保护回归：现有 Runtime `reducer_archive_failure_returns_original_and_success_keeps_recovery_stable` 定向测试通过，验证归档失败保留原文、成功归档仍可恢复。
 - 本轮付费调用为 0。验证覆盖固定的合成格式和原文保护边界，不证明真实 Vitest 环境覆盖、任务质量或账单节省；候选已纳入下一构建源码，但尚未打包或发布。
+
+## 后续应用验证边界
+
+本说明中的来源核对、自审和定向测试记录按原样保留。它们说明方法解析器及原文保护边界，不替代应用集成后的真实客户端验证。方法进入新的固定应用版本前，应由 `mr-evals` 通过实际 MetaRefine Harness 运行对应的 WorkBuddy Vitest 任务，再复核该次证据并固定应用快照。本次文档同步没有新增 Harness 运行、成绩或审核结论。
+
