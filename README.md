@@ -14,16 +14,11 @@
 
 ## Token 实测报告
 
-MetaRefine 0.1.93 使用真实 WorkBuddy · mr-deepseek 完成五类固定任务、11 组 OFF/ON 对照，22/22 个答案核验通过。最高单组节省 58.1%，11 组完整任务 Token 总量降低 42.08%。
+MetaRefine 使用真实 WorkBuddy · mr-deepseek 完成五类固定任务、11 组 OFF/ON 对照，22/22 个答案核验通过。最高单组节省 58.1%，11 组完整任务 Token 总量降低 42.08%。
 
-- [0.1.93 HTML 图表报告（下载后用浏览器打开）](reports/token/0.1.93/report.html)
-- [0.1.93 复现包 ZIP](reports/token/0.1.93/MetaRefine-Token-Reproduce-0.1.93.zip)
-- [0.1.93 完整结果 JSON](reports/token/0.1.93/results.json)
-
-**0.1.92 历史报告**
-
-- [HTML 图表报告（下载后用浏览器打开）](reports/token/2026-10-19/report.html)
-- [复现包 ZIP](reports/token/2026-10-19/MetaRefine-Token-Reproduce-0.1.92.zip)
+- [在线查看 MetaRefine Token 实测报告](https://mr.cosentec.com/reports/token.html)
+- [下载固定任务复现包 ZIP](https://mr.cosentec.com/reports/MetaRefine-Token-Reproduce.zip)
+- [下载完整结果数据 JSON](https://mr.cosentec.com/reports/token-results.json)
 
 ## 声明式配方提案
 
