@@ -59,7 +59,7 @@ pub fn summarize_vitest_success(command: &str, text: &str, exit_status: i32) -> 
         if count == 0
             || (count == 1 && unit != "test")
             || (count > 1 && unit != "tests")
-            || !is_ms(duration)
+            || !is_duration(duration)
         {
             return None;
         }
@@ -93,7 +93,7 @@ pub fn summarize_vitest_success(command: &str, text: &str, exit_status: i32) -> 
         .strip_prefix("Duration ")?
         .strip_prefix(' ')?;
     let (elapsed, phases) = duration.split_once(" (")?;
-    if !is_ms(elapsed) {
+    if !is_duration(elapsed) {
         return None;
     }
     let expected_phases = [
@@ -109,7 +109,7 @@ pub fn summarize_vitest_success(command: &str, text: &str, exit_status: i32) -> 
         .split(", ")
         .map(|phase| {
             let (name, value) = phase.split_once(' ')?;
-            is_ms(value).then_some(name)
+            is_duration(value).then_some(name)
         })
         .collect::<Option<Vec<_>>>()?;
     if actual_phases.as_slice() != expected_phases.as_slice() || index + 1 != lines.len() {
@@ -135,8 +135,8 @@ fn parse_counts(line: &str, label: &str) -> Option<(usize, usize)> {
     Some((passed, total))
 }
 
-fn is_ms(value: &str) -> bool {
-    let Some(number) = value.strip_suffix("ms") else {
+fn is_duration(value: &str) -> bool {
+    let Some(number) = value.strip_suffix("ms").or_else(|| value.strip_suffix('s')) else {
         return false;
     };
     let mut parts = number.split('.');
@@ -185,6 +185,13 @@ mod tests {
         assert!(summary.contains("2/2 test files passed"));
         assert!(summary.contains("5/5 tests passed"));
         assert!(summary.contains("Duration 24ms"));
+        let seconds_report = COMPLETE_VITEST_SUCCESS_REPORT
+            .replace("(2 tests) 4ms", "(2 tests) 0.004s")
+            .replace("collect 6ms", "collect 0.09s")
+            .replace("Duration  24ms", "Duration  1.48s");
+        let seconds_summary = summarize_vitest_success("vitest run", &seconds_report, 0)
+            .expect("verified seconds-form report should compact");
+        assert!(seconds_summary.contains("Duration 1.48s"));
         assert!(
             summarize_vitest_success("npx vitest run", COMPLETE_VITEST_SUCCESS_REPORT, 0).is_some()
         );
@@ -194,6 +201,10 @@ mod tests {
     fn vitest_nonzero_unknown_warning_skip_or_malformed_report_is_not_compacted() {
         let rejected = [
             (COMPLETE_VITEST_SUCCESS_REPORT.to_owned(), 1),
+            (
+                replace_fixture_text("Duration  24ms", "Duration  1.48min"),
+                0,
+            ),
             (replace_fixture_text("v4.0.0", "v4.1.0"), 0),
             (
                 replace_fixture_text("Tests  5 passed (5)", "Tests  4 passed | 1 skipped (5)"),
