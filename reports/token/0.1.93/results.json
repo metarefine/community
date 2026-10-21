@@ -1,0 +1,399 @@
+{
+  "version": "0.1.93",
+  "date": "2026-10-21",
+  "harness": {
+    "name": "WorkBuddy",
+    "usage_source": "MetaRefine Runtime per-request response usage receipts; WorkBuddy final result.usage was cross-checked.",
+    "aggregation": "Sum input_tokens and output_tokens across every request in the complete task; requests is the receipt count; total_tokens = input_tokens + output_tokens. Cached input is already included in input_tokens."
+  },
+  "model": "mr-deepseek",
+  "configuration": {
+    "context_scheme": "standard",
+    "off": {
+      "context_optimization": false,
+      "tool_output_reduction": false
+    },
+    "on": {
+      "context_optimization": true,
+      "tool_output_reduction": true
+    },
+    "other_settings": "unchanged"
+  },
+  "cases": [
+    {
+      "id": "showcase-orders-services-v1",
+      "label": "订单回归",
+      "rounds": [
+        {
+          "round": 1,
+          "off": {
+            "input_tokens": 541703,
+            "output_tokens": 1196,
+            "total_tokens": 542899,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 247825,
+            "output_tokens": 1230,
+            "total_tokens": 249055,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 293844,
+          "savings_percent": 54.125
+        },
+        {
+          "round": 2,
+          "off": {
+            "input_tokens": 542016,
+            "output_tokens": 1176,
+            "total_tokens": 543192,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 247774,
+            "output_tokens": 1671,
+            "total_tokens": 249445,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 293747,
+          "savings_percent": 54.0779
+        },
+        {
+          "round": 3,
+          "off": {
+            "input_tokens": 541754,
+            "output_tokens": 1181,
+            "total_tokens": 542935,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 247748,
+            "output_tokens": 1395,
+            "total_tokens": 249143,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 293792,
+          "savings_percent": 54.1118
+        }
+      ],
+      "totals": {
+        "off": {
+          "input_tokens": 1625473,
+          "output_tokens": 3553,
+          "total_tokens": 1629026,
+          "requests": 27,
+          "answer_correct": 3
+        },
+        "on": {
+          "input_tokens": 743347,
+          "output_tokens": 4296,
+          "total_tokens": 747643,
+          "requests": 27,
+          "answer_correct": 3
+        },
+        "saved_tokens": 881383,
+        "savings_percent": 54.1049
+      },
+      "range": {
+        "min": 54.0779,
+        "max": 54.125
+      }
+    },
+    {
+      "id": "showcase-typescript-emits-v1",
+      "label": "构建文件清单",
+      "rounds": [
+        {
+          "round": 1,
+          "off": {
+            "input_tokens": 385220,
+            "output_tokens": 1037,
+            "total_tokens": 386257,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 289333,
+            "output_tokens": 1757,
+            "total_tokens": 291090,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 95167,
+          "savings_percent": 24.6383
+        },
+        {
+          "round": 2,
+          "off": {
+            "input_tokens": 385492,
+            "output_tokens": 1193,
+            "total_tokens": 386685,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 289451,
+            "output_tokens": 1427,
+            "total_tokens": 290878,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 95807,
+          "savings_percent": 24.7765
+        }
+      ],
+      "totals": {
+        "off": {
+          "input_tokens": 770712,
+          "output_tokens": 2230,
+          "total_tokens": 772942,
+          "requests": 18,
+          "answer_correct": 2
+        },
+        "on": {
+          "input_tokens": 578784,
+          "output_tokens": 3184,
+          "total_tokens": 581968,
+          "requests": 18,
+          "answer_correct": 2
+        },
+        "saved_tokens": 190974,
+        "savings_percent": 24.7074
+      },
+      "range": {
+        "min": 24.6383,
+        "max": 24.7765
+      }
+    },
+    {
+      "id": "showcase-eslint-ci-logs-v5",
+      "label": "CI检查日志",
+      "rounds": [
+        {
+          "round": 1,
+          "off": {
+            "input_tokens": 446919,
+            "output_tokens": 1213,
+            "total_tokens": 448132,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 294775,
+            "output_tokens": 2144,
+            "total_tokens": 296919,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 151213,
+          "savings_percent": 33.743
+        },
+        {
+          "round": 2,
+          "off": {
+            "input_tokens": 446688,
+            "output_tokens": 902,
+            "total_tokens": 447590,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 295549,
+            "output_tokens": 1215,
+            "total_tokens": 296764,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "saved_tokens": 150826,
+          "savings_percent": 33.6974
+        }
+      ],
+      "totals": {
+        "off": {
+          "input_tokens": 893607,
+          "output_tokens": 2115,
+          "total_tokens": 895722,
+          "requests": 18,
+          "answer_correct": 2
+        },
+        "on": {
+          "input_tokens": 590324,
+          "output_tokens": 3359,
+          "total_tokens": 593683,
+          "requests": 18,
+          "answer_correct": 2
+        },
+        "saved_tokens": 302039,
+        "savings_percent": 33.7202
+      },
+      "range": {
+        "min": 33.6974,
+        "max": 33.743
+      }
+    },
+    {
+      "id": "showcase-typescript-diagnostic-v2",
+      "label": "类型错误定位",
+      "rounds": [
+        {
+          "round": 1,
+          "off": {
+            "input_tokens": 464813,
+            "output_tokens": 1042,
+            "total_tokens": 465855,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 340446,
+            "output_tokens": 1677,
+            "total_tokens": 342123,
+            "requests": 11,
+            "answer_correct": true
+          },
+          "saved_tokens": 123732,
+          "savings_percent": 26.5602
+        },
+        {
+          "round": 2,
+          "off": {
+            "input_tokens": 464731,
+            "output_tokens": 1016,
+            "total_tokens": 465747,
+            "requests": 9,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 340309,
+            "output_tokens": 1872,
+            "total_tokens": 342181,
+            "requests": 11,
+            "answer_correct": true
+          },
+          "saved_tokens": 123566,
+          "savings_percent": 26.5307
+        }
+      ],
+      "totals": {
+        "off": {
+          "input_tokens": 929544,
+          "output_tokens": 2058,
+          "total_tokens": 931602,
+          "requests": 18,
+          "answer_correct": 2
+        },
+        "on": {
+          "input_tokens": 680755,
+          "output_tokens": 3549,
+          "total_tokens": 684304,
+          "requests": 22,
+          "answer_correct": 2
+        },
+        "saved_tokens": 247298,
+        "savings_percent": 26.5455
+      },
+      "range": {
+        "min": 26.5307,
+        "max": 26.5602
+      }
+    },
+    {
+      "id": "showcase-module-bundles-v2",
+      "label": "模块打包",
+      "rounds": [
+        {
+          "round": 1,
+          "off": {
+            "input_tokens": 708579,
+            "output_tokens": 4822,
+            "total_tokens": 713401,
+            "requests": 19,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 417938,
+            "output_tokens": 3589,
+            "total_tokens": 421527,
+            "requests": 14,
+            "answer_correct": true
+          },
+          "saved_tokens": 291874,
+          "savings_percent": 40.913
+        },
+        {
+          "round": 2,
+          "off": {
+            "input_tokens": 1029834,
+            "output_tokens": 10173,
+            "total_tokens": 1040007,
+            "requests": 26,
+            "answer_correct": true
+          },
+          "on": {
+            "input_tokens": 434076,
+            "output_tokens": 2085,
+            "total_tokens": 436161,
+            "requests": 14,
+            "answer_correct": true
+          },
+          "saved_tokens": 603846,
+          "savings_percent": 58.0617
+        }
+      ],
+      "totals": {
+        "off": {
+          "input_tokens": 1738413,
+          "output_tokens": 14995,
+          "total_tokens": 1753408,
+          "requests": 45,
+          "answer_correct": 2
+        },
+        "on": {
+          "input_tokens": 852014,
+          "output_tokens": 5674,
+          "total_tokens": 857688,
+          "requests": 28,
+          "answer_correct": 2
+        },
+        "saved_tokens": 895720,
+        "savings_percent": 51.0845
+      },
+      "range": {
+        "min": 40.913,
+        "max": 58.0617
+      }
+    }
+  ],
+  "overall": {
+    "pairs": 11,
+    "arms": 22,
+    "answers_passed": 22,
+    "scenario_count": 5,
+    "off_tokens": 5982700,
+    "on_tokens": 3465286,
+    "saved_tokens": 2517414,
+    "savings_percent": 42.0782,
+    "max_savings_percent": 58.0617
+  },
+  "environment": {
+    "app_version": "0.1.93",
+    "tool_versions": {
+      "Node.js": "24.20.0",
+      "TypeScript": "6.0.3",
+      "ESLint": "10.10.0",
+      "esbuild": "0.28.2"
+    },
+    "sha256": {
+      "desktop_application": "468ad69d1830115b8ccf4d3efcfe7cbacfa75b4622ac38bcf8580b41513e68a3",
+      "frozen_manifest": "3f41a54805427d87761a54b5ca70ac34a2894f306f4bd02aff9eb65cdeb66443",
+      "reproduction_zip": "82c8d54dd978d6dc2ec9c51ad482f2c23325cf4b9f074601b42f44bc558e6c8b",
+      "reproduction_cases": "c66c89e11776cc41d21fc6ee0a5a9472cb4a06d3000d1f48d41ca89b9b2c7f30"
+    }
+  }
+}

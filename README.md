@@ -14,11 +14,16 @@
 
 ## Token 实测报告
 
-五类 WorkBuddy 完整任务实测，10 份答案检查均正确；按完整任务统计的 Token 减少为 12.00%–90.65%。
+MetaRefine 0.1.93 使用真实 WorkBuddy · mr-deepseek 完成五类固定任务、11 组 OFF/ON 对照，22/22 个答案核验通过。最高单组节省 58.1%，11 组完整任务 Token 总量降低 42.08%。
+
+- [0.1.93 HTML 图表报告（下载后用浏览器打开）](reports/token/0.1.93/report.html)
+- [0.1.93 复现包 ZIP](reports/token/0.1.93/MetaRefine-Token-Reproduce-0.1.93.zip)
+- [0.1.93 完整结果 JSON](reports/token/0.1.93/results.json)
+
+**0.1.92 历史报告**
 
 - [HTML 图表报告（下载后用浏览器打开）](reports/token/2026-10-19/report.html)
-- [下载复现包 ZIP](reports/token/2026-10-19/MetaRefine-Token-Reproduce-0.1.92.zip)
-
+- [复现包 ZIP](reports/token/2026-10-19/MetaRefine-Token-Reproduce-0.1.92.zip)
 
 ## 声明式配方提案
 
